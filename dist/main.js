@@ -43,7 +43,15 @@ class ShiftCipher {
       const idx = alphabet.indexOf(upperLetter);
 
       if (upperLetter === alphabet[idx]) {
-        encrypted.push(alphabet[idx + cipher]);
+        if ((cipher == 26)) {
+          let reminder = cipher % 26;
+          encrypted.push(alphabet[reminder]);
+        } else if (cipher > 26) {
+          let reminder = cipher % 26;
+          encrypted.push(alphabet[reminder]);
+        } else {
+          encrypted.push(alphabet[idx + cipher]);
+        }
       } else {
         encrypted.push(upperLetter);
       }

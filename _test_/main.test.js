@@ -22,5 +22,18 @@ describe('ShiftCipher', () => {
             const answer = new ShiftCipher('abc is good', 1);
             expect(answer.encrypt()).toBe('BCD JT HPPE'); 
          });
+        test("short sentence with number", () => {
+            const answer = new ShiftCipher('abc is 1 of the best', 1);
+            expect(answer.encrypt()).toBe('BCD JT 1 PG UIF CFTU'); 
+         });
+        test("Cipher equal to alphabet length", () => {
+            const answer = new ShiftCipher('z', 26);
+            expect(answer.encrypt()).toBe('A'); 
+        });
+        test("Cipher exceeding alphabet length", () => {
+            const answer = new ShiftCipher('z', 27);
+            expect(answer.encrypt()).toBe('B'); 
+         });
+         
     });
 });
