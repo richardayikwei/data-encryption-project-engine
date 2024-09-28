@@ -18,5 +18,9 @@ describe('ShiftCipher', () => {
             const answer = new ShiftCipher('abc', 1);
             expect(answer.encrypt()).toBe('BCD'); 
          });
+        test("short sentence", () => {
+            const answer = new ShiftCipher('abc is good', 1);
+            expect(answer.encrypt()).toBe('BCD JT HPPE'); 
+         });
     });
 });
