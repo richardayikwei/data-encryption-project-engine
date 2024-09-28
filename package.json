@@ -1,0 +1,13 @@
+{
+  "name": "data-encryption-project-engine",
+  "jest": {
+    "verbose": true
+  },
+  "scripts": {
+    "test": "jest",
+    "watch": "jest  -i ./_test_/main.test.js --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
