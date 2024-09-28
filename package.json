@@ -1,5 +1,7 @@
 {
   "name": "data-encryption-project-engine",
+   "version": "1.0.0",
+   "description": "The engine for an encryption website",
   "jest": {
     "verbose": true
   },
@@ -9,5 +11,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+   "author": "Your Name",
+  "license": "GPL-3.0"
 }
