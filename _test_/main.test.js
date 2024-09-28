@@ -28,12 +28,15 @@ describe('ShiftCipher', () => {
          });
         test("Cipher equal to alphabet length", () => {
             const answer = new ShiftCipher('z', 26);
-            expect(answer.encrypt()).toBe('A'); 
+            expect(answer.encrypt()).toBe('Z'); 
         });
         test("Cipher exceeding alphabet length", () => {
             const answer = new ShiftCipher('z', 27);
             expect(answer.encrypt()).toBe('B'); 
          });
-         
+            test("short sentence with cipher exceeding alphbet length", () => {
+              const answer = new ShiftCipher("abc is good", 26);
+              expect(answer.encrypt()).toBe("ABC IS GOOD");
+            });
     });
 });
